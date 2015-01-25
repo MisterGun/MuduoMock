@@ -2,14 +2,18 @@
 //
 
 #include "stdafx.h"
-#include "Mutex.h"
+#include "CSLock.h"
+#include "Atomic.h"
+#include "test.h"
+#include <iostream>
+
+using namespace std;
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    CSLock lock;
+    runAllTests();
 
-    
 	return 0;
 }
 
