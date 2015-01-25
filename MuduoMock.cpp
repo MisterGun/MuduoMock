@@ -6,7 +6,7 @@
 #include "Condition.h"
 #include "Atomic.h"
 #include "Thread.h"
-#include "test.h"
+#include "tests\test.h"
 #include <iostream>
 #include <windows.h>
 #include <vector>

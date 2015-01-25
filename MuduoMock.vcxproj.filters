@@ -39,14 +39,14 @@
     <ClInclude Include="Atomic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="test.h">
-      <Filter>test</Filter>
-    </ClInclude>
     <ClInclude Include="Thread.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StringHelper.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\test.h">
+      <Filter>test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -56,16 +56,16 @@
     <ClCompile Include="MuduoMock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Atomic_Test.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>test</Filter>
-    </ClCompile>
     <ClCompile Include="Thread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Thread_Test.cpp">
+    <ClCompile Include="tests\Atomic_Test.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\test.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\Thread_Test.cpp">
       <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>
