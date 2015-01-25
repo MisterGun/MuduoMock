@@ -9,7 +9,9 @@
 
 #include <stdio.h>
 #include <tchar.h>
+#include <assert.h>
 
 #pragma warning(disable : 4100)
+#pragma warning(disable : 4127)
 
 // TODO: reference additional headers your program requires here

@@ -1,25 +1,29 @@
 #include "stdafx.h"
 #include "test.h"
+#include <vector>
 
 using namespace std;
 
-typedef void (*testFunc)();
+typedef void (*TestFunc)();
+typedef vector<TestFunc> TestFuncArray;
 
 
-vector<testFunc>* pTestFuncs = NULL;
+static std::unique_ptr<TestFuncArray> s_spTestFuncs;
 
-void addTestFunc(testFunc t)
+void addTestFunc(TestFunc t)
 {
-    static vector<testFunc> g_testFuncs;
-    pTestFuncs = &g_testFuncs;
+    if(!s_spTestFuncs)
+    {
+        s_spTestFuncs.reset(new TestFuncArray);
+    }
 
-    g_testFuncs.push_back(t);
+    s_spTestFuncs->push_back(t);
 }
 
 void runAllTests()
 {
-    for(size_t i = 0; i < (*pTestFuncs).size(); i++)
+    for(size_t i = 0; i < (*s_spTestFuncs).size(); i++)
     {
-        (*pTestFuncs)[i]();
+        (*s_spTestFuncs)[i]();
     }
 }

@@ -26,13 +26,13 @@ public:
 
     T get()
     {
-        return AtomicTraits::AtomicAdd((T*)&value_, 0);
+        return AtomicTraits::AtomicAdd(&value_, 0);
     }
 
     T getAndAdd(T x)
     {
         T tmp = get();
-        AtomicTraits::AtomicAdd((T*)&value_, x);
+        AtomicTraits::AtomicAdd(&value_, x);
         return tmp;
     }
 
@@ -68,7 +68,7 @@ public:
 
     T getAndSet(T newValue)
     {
-        return AtomicTraits::AtomicSet((T*)&value_, newValue);
+        return AtomicTraits::AtomicSet(&value_, newValue);
     }
 
 private:
@@ -80,14 +80,14 @@ private:
 
 template<> struct AtomicIntegerT<int32_t>::AtomicTraits
 {
-    static int32_t AtomicAdd(int32_t* t, int32_t x) { return InterlockedExchangeAdd((LONG*)t, (LONG)x); }
-    static int32_t AtomicSet(int32_t* t, int32_t x) { return InterlockedExchange((LONG*)t, (LONG)x); }
+    static int32_t AtomicAdd(volatile int32_t* t, int32_t x) { return InterlockedExchangeAdd((volatile LONG*)t, (LONG)x); }
+    static int32_t AtomicSet(volatile int32_t* t, int32_t x) { return InterlockedExchange((volatile LONG*)t, (LONG)x); }
 };
 
 template<> struct AtomicIntegerT<int64_t>::AtomicTraits
 {
-    static int64_t AtomicAdd(int64_t* t, int64_t x) { return InterlockedExchangeAdd64((LONGLONG*)t, (LONGLONG)x); }
-    static int64_t AtomicSet(int64_t* t, int64_t x) { return InterlockedExchange64((LONGLONG*)t, (LONGLONG)x); }
+    static int64_t AtomicAdd(volatile int64_t* t, int64_t x) { return InterlockedExchangeAdd64((volatile LONGLONG*)t, (LONGLONG)x); }
+    static int64_t AtomicSet(volatile int64_t* t, int64_t x) { return InterlockedExchange64((volatile LONGLONG*)t, (LONGLONG)x); }
 };
 
 
