@@ -39,6 +39,6 @@ struct Initializer
 {
     Initializer()
     {
-        addTestFunc(testAtomic);
+        TestCases::instance().addTestFunc(testAtomic);
     }
 } initializer;

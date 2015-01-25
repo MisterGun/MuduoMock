@@ -6,6 +6,7 @@
 #include "Condition.h"
 #include "Atomic.h"
 #include "Thread.h"
+#include "TimeStamp.h"
 #include "tests\test.h"
 #include <iostream>
 #include <windows.h>
@@ -21,8 +22,7 @@ using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    runAllTests();
-
+    TestCases::instance().runAllTests();
 
 	return 0;
 }
