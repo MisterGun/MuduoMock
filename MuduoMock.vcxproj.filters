@@ -54,6 +54,12 @@
     <ClInclude Include="TimeStamp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CountDownLatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Date.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -72,6 +78,12 @@
       <Filter>test</Filter>
     </ClCompile>
     <ClCompile Include="tests\Thread_Test.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="Date.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\Date_Test.cpp">
       <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>

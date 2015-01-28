@@ -69,5 +69,6 @@ void testThreadFunc()
 struct Init{
     Init() {
         //addTestFunc(testThreadFunc);
+        int i = 3;
     }
 } initer;
