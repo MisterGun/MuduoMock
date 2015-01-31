@@ -60,6 +60,9 @@
     <ClInclude Include="Date.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ThreadPool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -84,6 +87,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tests\Date_Test.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\ThreadPool_Test.cpp">
       <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>

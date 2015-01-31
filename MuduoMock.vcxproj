@@ -87,6 +87,7 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="tests\test.h" />
     <ClInclude Include="Thread.h" />
+    <ClInclude Include="ThreadPool.h" />
     <ClInclude Include="TimeStamp.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
@@ -100,6 +101,7 @@
     <ClCompile Include="tests\Atomic_Test.cpp" />
     <ClCompile Include="tests\Date_Test.cpp" />
     <ClCompile Include="tests\test.cpp" />
+    <ClCompile Include="tests\ThreadPool_Test.cpp" />
     <ClCompile Include="tests\Thread_Test.cpp" />
     <ClCompile Include="Thread.cpp" />
   </ItemGroup>

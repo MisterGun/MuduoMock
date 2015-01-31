@@ -19,11 +19,12 @@
 
 using namespace std;
 
+extern void testThreadPool();
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    TestCases::instance().runAllTests();
-
+    //TestCases::instance().runAllTests();
+    testThreadPool();
 	return 0;
 }
 
